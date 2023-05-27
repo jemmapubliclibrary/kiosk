@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Check-In - Jemma Public Library Kiosk</title>
+  <style>
+    /* Add some basic styling to the kiosk interface */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      margin-top: 50px;
+    }
+    input {
+      margin: 10px;
+      padding: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Check-In</h1>
+  
+  <form>
+    <label for="book-barcode">Book Barcode:</label>
+    <input type="text" id="book-barcode" placeholder="Enter Book Barcode"><br>
+    <button onclick="checkIn()">Check-In</button>
+  </form>
+
+  <script>
+    function checkIn() {
+      var bookBarcode = document.getElementById('book-barcode').value;
+
+      // Perform check-in logic here
+      // You can use AJAX to send data to the server and process the check-in
+
+      // Clear input field after check-in
+      document.getElementById('book-barcode').value = '';
+
+      // Display success message or perform any additional actions
+      alert("Check-in successful! Place item in book bin.");
+    }
+  </script>
+</body>
+</html>
